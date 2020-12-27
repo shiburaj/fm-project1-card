@@ -1,0 +1,104 @@
+:root {
+    margin: 0;
+    box-sizing: border-box;
+    --primary1: hsl(185, 75%, 39%);
+    --primary2: hsl(229, 23%, 23%);
+    --primary3: hsl(227, 10%, 46%);
+    --nuetral: hsl(0, 0%, 59%);
+}
+
+body, html {
+    background: url(../images/bg-pattern-top.svg)
+                top -160% left -220% / 80% 80% 
+                no-repeat,
+                url(../images/bg-pattern-bottom.svg)
+                bottom -160% right -220% / 80% 80% 
+                no-repeat,
+                var(--primary1);
+    height: 100%;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: var(--primary2);
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.card--header {
+    width: 100%;
+    height: 100px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background: url(../images/bg-pattern-card.svg);
+}
+
+.card--body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4em 2em 2em 2em;
+    position: relative;
+    border-bottom: 1px solid rgb(238, 238, 238);
+}
+
+.card--body img {
+    border-radius: 50%;
+    position: absolute;
+    top: calc(-30% - 5px);
+    border: 5px solid white;
+}
+
+.card--body h1 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.card--body small {
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: var(--nuetral);
+}
+
+.card--body h1 span {
+    color: var(--primary3);
+    font-weight: 400;
+    padding-left: .5em;
+}
+
+.card--footer {
+    display: flex;
+    justify-content: center;
+    padding: 1em 2em 1em 2em;
+}
+
+.card--footer--item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    padding-bottom: 1em;
+}
+
+.card--footer--item h2{
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.card--footer--item div{
+    font-size: .6rem;
+    color: var(--nuetral);
+    letter-spacing: .1rem;
+}
